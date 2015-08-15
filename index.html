@@ -32,15 +32,10 @@
 			<nav class="gn-menu-wrapper">
 				<div class="gn-scroller">
 					<ul class="gn-menu">
-						<li class="gn-search-item">
-							<input placeholder="Search" type="search" class="gn-search">
-							<a class="gn-icon gn-icon-search"><span>Search</span></a>
-						</li>
-						<li>
-							<a href="#about" class="gn-icon gn-icon-download">About</a>
-						</li>
-						<li><a href="#service" class="gn-icon gn-icon-cog">Service</a></li>
-						<li><a href="#works" class="gn-icon gn-icon-help">Works</a></li>
+						<li><a href="#quem-somos" class="gn-icon gn-icon-q bg-gray hide-menu">Quem Somos ?</a></li>
+						<li><a href="#o-que-e-autismo" class="gn-icon gn-icon-o hide-menu">O que é Autismo ?</a></li>
+						<li><a href="#o-que-fazemos" class="gn-icon gn-icon-o bg-gray hide-menu">O que Fazemos ?</a></li>
+						<li><a href="#atividades-recentes" class="gn-icon gn-icon-a hide-menu">Atividades Recentes</a></li>
 					</ul>
 				</div><!-- /gn-scroller -->
 			</nav>
@@ -75,8 +70,8 @@
 </section>
 <!-- /Section: intro -->
 
-<!-- Section: about -->
-<section id="about" class="home-section text-center bg-gray">
+<!-- Section: quem-somos -->
+<section id="quem-somos" class="home-section text-center bg-gray">
 	<div class="heading-about marginbot-50">
 		<div class="container">
 			<div class="row">
@@ -91,11 +86,11 @@
 		</div>
 	</div>
 </section>
-<!-- /Section: about -->
+<!-- /Section: quem-somos -->
 
 
-<!-- Section: services -->
-<section id="service" class="home-section text-center">
+<!-- Section: o-que-e-autismo -->
+<section id="o-que-e-autismo" class="home-section text-center">
 
 	<div class="heading-about marginbot-50">
 		<div class="container">
@@ -114,12 +109,12 @@
 	</div>
 
 </section>
-<!-- /Section: services -->
+<!-- /Section: o-que-e-autismo -->
 
 
-<!-- Section: works -->
-<section id="works" class="home-section text-center bg-gray">
-	<div class="heading-works marginbot-50">
+<!-- Section: o-que-fazemos -->
+<section id="o-que-fazemos" class="home-section text-center bg-gray">
+	<div class="heading-atividades marginbot-50">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
@@ -235,10 +230,11 @@
 	</div>
 
 </section>
-<!-- /Section: works -->
+<!-- /Section: o-que-fazemos -->
 
-<section id="works" class="home-section text-center bg-gray">
-	<div class="heading-works marginbot-50">
+<!-- Section atividades-recentes-->
+<section id="atividades-recentes" class="home-section text-center bg-gray">
+	<div class="heading-atividades marginbot-50">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
@@ -259,19 +255,23 @@
 			<div class="col-sm-12 col-md-12 col-lg-12" >
 
 				<div class="row gallery-item">
+					<div class="col-md-1"></div>
+
 					<div class="col-md-3">
-						<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg">
-							<img src="img/works/1.jpg" class="img-responsive" alt="img">
+						<a href="img/atividades/1.jpg" title="3 Parada tarde azul: 2 de abril dia mundial da conscientização do  Autismo" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/atividades/1@2x.jpg">
+							<img src="img/atividades/1.jpg" class="img-responsive" alt="img">
 						</a>
 					</div>
+
 					<div class="col-md-3">
-						<a href="img/works/2.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg">
-							<img src="img/works/2.jpg" class="img-responsive" alt="img">
+						<a href="img/atividades/2.jpg" title="Almoço para angariar fundo" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/atividades/1@2x.jpg">
+							<img src="img/atividades/2.jpg" class="img-responsive" alt="img">
 						</a>
 					</div>
+
 					<div class="col-md-3">
-						<a href="img/works/3.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg">
-							<img src="img/works/3.jpg" class="img-responsive" alt="img">
+						<a href="img/atividades/3.jpg" title="Feira de roupas" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/atividades/1@2x.jpg">
+							<img src="img/atividades/3.jpg" class="img-responsive" alt="img">
 						</a>
 					</div>
 
@@ -281,15 +281,16 @@
 		</div>
 	</div>
 </section>
+<!-- /Section atividades-recentes-->
+
 <!--ancora-->
-<a href="#home" class="scroll scroll-b"><span class="glyphicon glyphicon-chevron-up"></span></a>
+<a href="#intro" class="scroll scroll-b"><span class="glyphicon glyphicon-chevron-up"></span></a>
 
 <footer>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-lg-12">
 
-				<p class="pull-right">Copyright &copy; 2014 Ninestars - by <a href="http://bootstraptaste.com">Bootstraptaste</a></p>
 			</div>
 		</div>
 	</div>
@@ -315,6 +316,11 @@
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
 		});
+	});
+
+	$(".hide-menu").click(function(event){
+		event.preventDefault();
+		$(".gn-menu-wrapper").toggleClass("gn-open-all");
 	});
 </script>
 
